@@ -42,10 +42,11 @@ test("One dollar should be 106.5 yen", function(){
 test("One yen should be 0.006254 GBP", function(){
     //import the function from app.js
     const { fromYenToPound } = require('./app.js')
+    const pound = fromYenToPound(1)
 
-    // convert euro to dollar, 1 euro is 127.9 yen, 127.9 yen is 0.8 british pounds
+    // convert euro to yen, 1 euro is 127.9 yen, 127.9 yen is 0.8 british pounds
     const expected = ((1 / 127.9)* 0.8); 
     
     // this is the comparison for the unit test
-     expect(fromYenToPound(1)).toBe(expected); 
+     expect(pound).toBe(expected); 
 })
